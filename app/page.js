@@ -435,7 +435,7 @@ export default function Page() {
   const [contrast, setContrast] = useState(1.2);
   const [sharpen, setSharpen] = useState(0.6);
   const [thaiFix, setThaiFix] = useState(true);
-  const [thaiAddSpaces, setThaiAddSpaces] = useState(true);
+  const [thaiAddSpaces, setThaiAddSpaces] = useState(false);
 
   // NEW: จัดบรรทัด + ขนาดอักษรผลลัพธ์
   const [autoWrap, setAutoWrap] = useState(true);
