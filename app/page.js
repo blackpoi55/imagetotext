@@ -7,9 +7,13 @@ import Swal from "sweetalert2";
 
 // ---------- pdf.js worker ----------
 if (typeof window !== "undefined") {
-  pdfjsLib.GlobalWorkerOptions.workerSrc =
-    `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
-}
+  // ใช้ไฟล์ที่เราโฮสต์เอง (same-origin) กัน CORS และ module worker error
+  // ใช้ .mjs เท่านั้นสำหรับ pdf.js v4
+  // แนวทางนี้เวิร์คทั้ง dev/prod ของ Next.js
+  // (อย่าชี้ไปที่ .js แบบเดิม)
+  // @ts-ignore
+  pdfjsLib.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
+} 
 
 /* ============================== constants/helpers ============================== */
 const LANG_PATH = "/tessdata";
