@@ -1,0 +1,27 @@
+{
+  "name": "imagetotext",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "next": "16.0.0",
+    "pdfjs-dist": "^4.10.38",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "sweetalert2": "^11.26.3",
+    "tesseract.js": "^4.0.2",
+    "tesseract.js-core": "^4.0.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "cross-env": "^10.1.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.0.0",
+    "tailwindcss": "^4"
+  }
+}
